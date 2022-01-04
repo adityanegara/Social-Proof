@@ -1,0 +1,30 @@
+@use './variables.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+html,
+body {
+  min-height: 100vh;
+  background-color: $white;
+  font-family: $primary-font;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-repeat: no-repeat, no-repeat;
+  background-image: url('../assets/background/bg-pattern-bottom-mobile.svg'),
+    url('../assets/background/bg-pattern-top-mobile.svg');
+  background-size: 100vw auto, auto auto;
+  background-position: bottom right, top left;
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    background-image: url('../assets/background/bg-pattern-bottom-desktop.svg'),
+      url('../assets/background/bg-pattern-top-desktop.svg');
+    background-size: auto auto, auto auto;
+    background-position: bottom right, top left;
+  }
+}
+
+p {
+  margin: 0;
+}
