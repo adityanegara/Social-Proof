@@ -26,5 +26,6 @@
     grid-template-areas:
       'title-container ratings-container'
       'reviews-container reviews-container';
+    grid-template-columns: 1fr 1fr;
   }
 }
