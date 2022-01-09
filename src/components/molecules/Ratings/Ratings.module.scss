@@ -1,0 +1,44 @@
+@use '../../../styles/variables.scss' as *;
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  height: 100%;
+  justify-content: center;
+  .rating {
+    background-color: $light-grayish__magenta;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    border-radius: 15px;
+    .rating-stars {
+      display: flex;
+      gap: 8px;
+    }
+    .rating-info {
+      font-weight: 700;
+      color: $very-dark__magenta;
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .ratings {
+    div:nth-child(1) {
+      align-self: flex-start;
+    }
+    div:nth-child(2) {
+      align-self: center;
+    }
+    div:nth-child(3) {
+      align-self: flex-end;
+    }
+    .rating {
+      flex-direction: row;
+      width: fit-content;
+    }
+  }
+}

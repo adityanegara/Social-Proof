@@ -1,0 +1,70 @@
+@use '../../../styles/variables.scss' as *;
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  .review {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    border-radius: 15px;
+    background-color: $very-dark__magenta;
+    .user-info {
+      align-items: center;
+
+      display: flex;
+      gap: 20px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+      p:nth-child(1) {
+        color: $light-grayish__magenta;
+        font-weight: 700;
+      }
+      p:nth-child(2) {
+        color: $soft-pink;
+        font-size: 0.8em;
+      }
+    }
+    .user-review {
+      color: $white;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      p {
+        font-size: 0.85em;
+        line-height: 23px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 800px) {
+  .reviews {
+    flex-direction: row;
+    gap: 2vw;
+    .review:nth-child(2) {
+      margin-top: 5vh;
+    }
+    .review:nth-child(3) {
+      margin-top: 10vh;
+    }
+    .review {
+      padding-top: 4vh;
+      padding-bottom: 4vh;
+    }
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

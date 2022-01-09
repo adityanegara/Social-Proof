@@ -1,31 +1,37 @@
 .social-proof {
-  background-color: salmon;
   display: grid;
-  margin-top: 5vh;
+  margin-top: 15vh;
   grid-template-areas:
     'title-container'
     'ratings-container'
     'reviews-container';
+  row-gap: 5vh;
   .title-container {
-    background-color: cornsilk;
     grid-area: title-container;
   }
   .ratings-container {
-    background-color: darkolivegreen;
     grid-area: ratings-container;
   }
   .reviews-container {
-    background-color: steelblue;
+    margin-bottom: 5vh;
     grid-area: reviews-container;
   }
 }
 
 @media only screen and (min-width: 800px) {
   .social-proof {
-    margin-top: 15vh;
     grid-template-areas:
       'title-container ratings-container'
       'reviews-container reviews-container';
     grid-template-columns: 1fr 1fr;
+  }
+
+  .title-container {
+    h1 {
+      width: 65%;
+    }
+    p {
+      width: 80%;
+    }
   }
 }
